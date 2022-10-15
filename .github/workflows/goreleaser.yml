@@ -24,4 +24,10 @@ jobs:
           version: latest
           args: release --rm-dist
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+#          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          # GITHUB_TOKEN permissions are limited to the repository that contains your workflow.
+          # If you need to push the homebrew tap to another repository,
+          # you must therefore create a custom Personal Access Token with repo permissions at https://github.com/settings/tokens
+          # and add it as a secret in the repository.
+          # If you create a secret named GH_PAT and uncomment the following line
+          GITHUB_TOKEN: ${{ secrets.GH_PAT }}

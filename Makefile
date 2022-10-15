@@ -1,4 +1,4 @@
-VERSION=0.0.2
+VERSION=0.0.3
 NAME=bbx
 CMD_NAME=bbx
 DESC="bbx is abbr for 百宝箱(bai bao xiang), it just means a toolbox"

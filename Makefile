@@ -1,4 +1,4 @@
-VERSION=0.0.3
+VERSION=0.0.4
 NAME=bbx
 CMD_NAME=bbx
 DESC="bbx is abbr for 百宝箱(bai bao xiang), it just means a toolbox"
@@ -8,6 +8,10 @@ AUTHOR="etng"
 AUTHOR_EMAIL="etng2004@gmail.com"
 local:
 	goreleaser release --snapshot --skip-publish --rm-dist
+run:
+	go run main.go
+run_local:
+	dist/${NAME}_darwin_amd64_v1/${NAME}
 init:
 	rm -f .goreleaser.yaml || true
 	rm -fr .git || true

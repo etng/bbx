@@ -9,6 +9,12 @@ before:
 builds:
   - env:
       - CGO_ENABLED=0
+    ldflags:
+      - -s -w 
+      - -X version.Version={{.Version}}
+      - -X version.Commit={{.Commit}}
+      - -X version.Date={{.Date}}
+      - -X version.BuiltBy=GithubAction
     goos:
       - linux
       - windows

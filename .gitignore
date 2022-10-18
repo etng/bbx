@@ -1,6 +1,7 @@
-
-
 dist/
 .idea
 .commit_comment
 .env
+data/
+playground/
+.DS_Store

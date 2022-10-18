@@ -4,13 +4,14 @@ import (
 	"fmt"
 	"github.com/etng/bbx/commands"
 	"github.com/etng/bbx/helpers"
+	"github.com/etng/bbx/version"
 	_ "github.com/joho/godotenv/autoload"
 	"os"
 )
 
 func main() {
 	if !helpers.GetBoolEnv("BBX_NO_BANNER") {
-		fmt.Println("Welcome to use BBX")
+		fmt.Printf("Welcome to use BBX %s\n", version.Version)
 	}
 
 	cmdName := "help"
